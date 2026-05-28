@@ -96,6 +96,37 @@ data/screens/us_100m_1b_top_fcf_valuation.md
 data/screens/us_100m_1b_top_fcf_valuation.csv
 ```
 
+## Buffett-inspired research agent
+
+The project includes a separate Buffett-inspired subagent for long-term value
+research. It is based on public value-investing principles commonly associated
+with Warren Buffett and Berkshire Hathaway's public investment history:
+
+- stay inside a circle of competence
+- prefer durable competitive advantages over temporary or policy-created edges
+- focus on owner earnings and long-term free cash flow
+- demand business predictability and balance-sheet caution
+- require a margin of safety
+- avoid action when the business is too hard or the evidence is incomplete
+
+This agent does not impersonate Warren Buffett or Berkshire Hathaway, and it
+does not provide personalized financial advice. It produces a research stance
+such as `study_but_require_manual_verification`, `watchlist_or_too_hard`, or
+`pass_for_now`.
+
+To run the agent over the current top FCF screen:
+
+```bash
+python3 scripts/buffett_review_top_fcf.py
+```
+
+The output lives in:
+
+```text
+data/screens/us_100m_1b_top_fcf_buffett_review.md
+data/screens/us_100m_1b_top_fcf_buffett_review.csv
+```
+
 ## Storage decision
 
 Use a hybrid storage model:
